@@ -9,7 +9,7 @@
 @Component
 public class Teacher {
 
-		@Autowired
+    @Autowired
     private Printer printer; // 類型符合，注入成功
     // 變數的類型盡量使用 Interface
 
@@ -38,6 +38,8 @@ public class Teacher {
 -----------------------------------------------------------------
 ```
 
+
+
 ### @Qualifier
 
 - 用法：通常是加在 class 變數上，會跟 `@Autowired` 一起用
@@ -48,8 +50,8 @@ public class Teacher {
 @Component
 public class Teacher {
 
-		@Autowired
-		@Qualifier("hpPrinter")
+    @Autowired
+    @Qualifier("hpPrinter")
     private Printer printer;
 
     public void teach() {
@@ -57,3 +59,4 @@ public class Teacher {
     }
 }
 ```
+

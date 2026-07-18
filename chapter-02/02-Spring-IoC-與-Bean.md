@@ -44,7 +44,7 @@ public class HpPrinter implements Printer {
 @Component
 public class Teacher {
 
-		@Autowired
+    @Autowired
     private Printer printer;
 
     public void teach() {
@@ -52,6 +52,8 @@ public class Teacher {
     }
 }
 ```
+
+
 
 ### @RestController
 
@@ -70,6 +72,8 @@ public class MyController {
 }
 ```
 
+
+
 ### Spring IoC 專有名詞
 
 - IoC = Inversion of Control (控制反轉)
@@ -77,3 +81,4 @@ public class MyController {
 - Bean = 存放在 Spring 容器內的 object
 - `@Component` 註解 = 加在 class 上, 將該 class 變成 Spring 容器所管理的 bean
 - `@Autowired` 註解 = 加在變數上, 取得 Spring 容器中的 bean
+
