@@ -1,5 +1,7 @@
 # Spring Boot Learning
 
+> 🚧 建置中
+
 個人學習筆記，整理自 Hahow 課程：[Java 工程師必備！Spring Boot 零基礎入門](https://hahow.in/courses/5fe22e7fe810e10fc483dd78)。
 
 ## 章節目錄
