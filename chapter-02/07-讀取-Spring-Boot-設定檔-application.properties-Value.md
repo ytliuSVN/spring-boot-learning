@@ -6,8 +6,8 @@ Spring Boot project 結構
 flowchart LR
     src["📁 src"]
 
-    src --> main["📁 main<br/><small>放我們要寫的 code</small>"]
-    src --> test["📁 test<br/><small>放測試用的 code</small>"]
+    src --> main["📁 main"]
+    src --> test["📁 test"]
 
     main --> mainJava["📁 java"]
     main --> mainRes["📁 resources"]
