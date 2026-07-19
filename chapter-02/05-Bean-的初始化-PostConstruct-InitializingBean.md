@@ -20,9 +20,9 @@ public class HpPrinter implements Printer {
     private int count;
 
     @PostConstruct
-		public void initialize() {
-		    count = 5;
-		}
+    public void initialize() {
+	count = 5;
+    }
 
     @Override
     public void print(String message) {
@@ -32,6 +32,8 @@ public class HpPrinter implements Printer {
     }
 }
 ```
+
+
 
 ### 實現 InitializingBean interface
 
@@ -43,7 +45,7 @@ public class HpPrinter implements Printer, InitializingBean {
 
     @Override
     public void afterPropertiesSet() throw Exception {
-		    count = 5;
+        count = 5;
     }
 
     @Override
@@ -54,3 +56,4 @@ public class HpPrinter implements Printer, InitializingBean {
     }
 }
 ```
+
