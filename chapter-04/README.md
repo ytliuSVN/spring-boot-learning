@@ -2,7 +2,6 @@
 
 ## 目錄
 
-- [單元 1 - Spring MVC 簡介](./01-Spring-MVC-簡介.md)
 - [單元 2 - Http 協議](./02-Http-協議.md)
 - [單元 3 - URL 路徑對應 - @RequestMapping](./03-URL-路徑對應-RequestMapping.md)
 - [單元 4 - 結構化的呈現數據 Json](./04-結構化的呈現數據-Json.md)
