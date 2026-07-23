@@ -21,7 +21,7 @@ public class MyController {
 
 ### @Controller + @ResponseBody
 
-每個方法上都必須得加上 @ResponseBody 註解 (比較舊的 project)
+每個方法上都必須得加上 `@ResponseBody` 註解 (比較舊的 project)
 
 ```java
 @Controller
