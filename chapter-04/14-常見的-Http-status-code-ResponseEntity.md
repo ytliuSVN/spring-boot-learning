@@ -12,8 +12,7 @@
 
 | Http 狀態碼 | 代表的意思 |
 | --- | --- |
-| 301 Moved Permanently | 永久性重新導向，新的 url 應放在 response header 的 "Location" 中返回
-通常會用在網頁搬家上 |
+| 301 Moved Permanently | 永久性重新導向，新的 url 應放在 response header 的 "Location" 中返回，通常會用在網頁搬家上 |
 | 302 Found | 臨時重新導向，新的臨時性的 url 應放在 response header 的 "Location" 中返回 |
 
 ### 4xx-前端請求錯誤
