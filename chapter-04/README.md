@@ -17,4 +17,3 @@
 - [單元 14 - 常見的 Http status code + ResponseEntity<?>](./14-常見的-Http-status-code-ResponseEntity.md)
 - [單元 15 - Controller 層統一的 Exception 處理 - @ControllerAdvice + @ExceptionHandler](./15-Controller-層統一的-Exception-處理-ControllerAdvice-ExceptionHandler.md)
 - [單元 16 - 攔截器 Interceptor](./16-攔截器-Interceptor.md)
-- [單元 17 - Spring MVC 總結](./17-Spring-MVC-總結.md)
