@@ -3,7 +3,7 @@
 ## 目錄
 
 - [單元 1 - Spring JDBC 簡介](./01-Spring-JDBC-簡介.md)
-- [單元 2 - 使用 IntelliJ 管理資料庫的數據](./02-使用-IntelliJ-管理資料庫的數據.md)
+- [單元 2 - 使用 IntelliJ 管理資料庫的資料](./02-使用-IntelliJ-管理資料庫的資料.md)
 - [單元 3 - 資料庫連線設定](./03-資料庫連線設定.md)
 - [單元 4 - 使用 NamedParameterJdbcTemplate (一) – update 方法 (INSERT、UPDATE、DELETE)](./04-使用-NamedParameterJdbcTemplate-(一)-update-方法-INSERT-UPDATE-DELETE.md)
 - [單元 5 - 使用 NamedParameterJdbcTemplate (二) – update 的進階用法](./05-使用-NamedParameterJdbcTemplate-(二)-update-的進階用法.md)
