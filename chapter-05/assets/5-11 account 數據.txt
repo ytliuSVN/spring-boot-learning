@@ -1,0 +1,9 @@
+CREATE TABLE account
+(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(30),
+    balance INT
+);
+
+INSERT INTO account (name, balance) VALUES ('Judy', 2000);
+INSERT INTO account (name, balance) VALUES ('Kevin', 2000);
