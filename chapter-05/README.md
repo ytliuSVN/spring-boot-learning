@@ -14,4 +14,3 @@
 - [單元 10 - @Service、@Repository、@Component 的差別](./10-Service-Repository-Component-的差別.md)
 - [單元 11 - 交易管理 - @Transactional](./11-交易管理-Transactional.md)
 - [單元 12 - 多個資料庫的連線設定](./12-多個資料庫的連線設定.md)
-- [單元 13 - Spring JDBC 總結](./13-Spring-JDBC-總結.md)
