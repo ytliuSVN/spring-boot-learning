@@ -8,4 +8,3 @@
 - [單元 4 - 使用 CrudRepository 執行資料庫的 CRUD 操作](./04-使用-CrudRepository-執行資料庫的-CRUD-操作.md)
 - [單元 5 - 自定義查詢條件 - findByXxx 的命名規則](./05-自定義查詢條件-findByXxx-的命名規則.md)
 - [單元 6 - 原生 SQL 查詢 - @Query](./06-原生-SQL-查詢-Query.md)
-- [單元 7 - Spring Data JPA 總結](./07-Spring-Data-JPA-總結.md)
