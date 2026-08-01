@@ -2,7 +2,7 @@
 
 1. Clone Repository
 
-    [git@github.com](mailto:git@github.com):ytliuSVN/springboot-mall.git
+    `git@github.com:ytliuSVN/springboot-mall.git`
 
 2. 進到 /Users/penny/Documents/Projects/Java/springboot-mall
 3. 刪掉 `.idea` 的隱藏資料夾
