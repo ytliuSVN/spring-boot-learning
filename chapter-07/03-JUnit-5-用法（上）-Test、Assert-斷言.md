@@ -39,6 +39,7 @@ public class CalculatorTest {
 
         assertEquals(3, result);
         // assertEquals(3, result, "計算結果が正しくありません。");
+        assertTrue(result > 0);
     }
 
     @Test
@@ -64,4 +65,18 @@ public class CalculatorTest {
 | `assertFalse(A)` | 斷言 A 為 false |
 | `assertThrows(exception, method)` | 斷言執行 method 時，會拋出 exception |
 
+遇到除以 0 時是否會拋出 `ArithmeticException`
 
+```java
+@Test
+public void divide() {
+    Calculator calculator = new Calculator();
+    int result = calculator.divide(4, 2);
+
+    assertEquals(2, result);
+
+    assertThrows(ArithmeticException.class, () -> {
+        calculator.divide(1, 0);
+    });
+}
+```
