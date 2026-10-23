@@ -1,12 +1,12 @@
 # 單元 4 - JUnit 5 用法（下） - @BeforeEach、@AfterEach、@BeforeAll、@AfterAll、@Disabled、@DisplayName
 
-# JUnit 5 其他常用註解
+## JUnit 5 其他常用註解
 
 * `@BeforeEach`、`@AfterEach`
   * `@BeforeEach`：在每次 `@Test` 開始前，都會執行一次
   * `@AfterEach`：在每次 `@Test` 結束後，都會執行一次
 
-# `@BeforeEach`、`@AfterEach`
+##  `@BeforeEach`、`@AfterEach`
 
 ```java
 public class MyTest {
@@ -50,7 +50,7 @@ public class MyTest {
   * 預設要求方法必須是 `static`
   * 實務上不常用，無法跟 Bean 做互動
 
-# `@BeforeAll`、`@AfterAll`
+##  `@BeforeAll`、`@AfterAll`
 
 ```java
 public class MyTest {
