@@ -91,3 +91,24 @@ public class MyTest {
 執行 @AfterEach
 執行 @AfterAll
 ```
+
+`@Disabled`：忽略該 `@Test` 不執行
+
+```java
+@Disabled
+@Test
+public void add() {
+    ...
+}
+```
+
+
+`@DisplayName`：自定義顯示名稱
+
+```java
+@DisplayName("割り算のテスト")
+@Test
+public void divide() {
+    ...
+}
+```
