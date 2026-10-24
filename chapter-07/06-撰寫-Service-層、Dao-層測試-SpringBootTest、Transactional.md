@@ -20,6 +20,9 @@ public class StudentDaoImplTest {
        Student student = studentDao.getById(1);
        assertNotNull(student);
        assertEquals("Amy", student.getName());
+       assertEquals(90.3, student.getScore());
+       assertTrue(student.isGraduate());
+       assertNotNull(student.getCreateDate());
     }
 }
 ```
