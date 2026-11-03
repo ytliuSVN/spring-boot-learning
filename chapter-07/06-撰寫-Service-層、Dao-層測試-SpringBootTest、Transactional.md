@@ -40,6 +40,37 @@ public void deleteById() {
     Student student = studentDao.getById(3);
     assertNull(student);
 }
+
+@Test
+@Transactional
+public void insert() {
+    Student student = new Student();
+    student.setName("Kevin");
+    student.setScore(66.2);
+    student.setGraduate(true);
+
+    Integer studentId = studentDao.insert(student);
+
+    Student result = studentDao.getById(studentId);
+    assertNotNull(result);
+    assertEquals("Kevin", result.getName());
+    assertEquals(66.2, result.getScore());
+    assertTrue(result.isGraduate());
+    assertNotNull(result.getCreateDate());
+}
+
+@Test
+@Transactional
+public void update() {
+    Student student = studentDao.getById(3);
+    student.setName("John");
+
+    studentDao.update(student);
+
+    Student result = studentDao.getById(3);
+    assertNotNull(result);
+    assertEquals("John", result.getName());
+}
 ```
 
 ## 意義不同的 `@Transactional`
