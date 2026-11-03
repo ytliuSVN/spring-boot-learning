@@ -17,10 +17,10 @@ public class StudentDaoImplTest {
 
     @Test
     public void getById() {
-       Student student = studentDao.getById(1);
+       Student student = studentDao.getById(3);
        assertNotNull(student);
        assertEquals("Amy", student.getName());
-       assertEquals(90.3, student.getScore());
+       assertEquals(100, student.getScore());
        assertTrue(student.isGraduate());
        assertNotNull(student.getCreateDate());
     }
