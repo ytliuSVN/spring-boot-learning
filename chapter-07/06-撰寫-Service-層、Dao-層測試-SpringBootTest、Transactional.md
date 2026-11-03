@@ -26,3 +26,27 @@ public class StudentDaoImplTest {
     }
 }
 ```
+
+## `@Transactional`（for 單元測試）
+
+* 用法：可以加在方法上、也可以加在 class 上
+* 用途：在單元測試結束後，rollback 所有資料庫操作，將數據恢復原狀
+
+```java
+@Transactional
+@Test
+public void deleteById() {
+    studentDao.deleteById(3);
+    Student student = studentDao.getById(3);
+    assertNull(student);
+}
+```
+
+## 意義不同的 `@Transactional`
+
+- `@Transactional` 在 main 資料夾（正常程式）
+    - 交易管理
+    - 程式運行中途發生錯誤的話，才 rollback 已經執行的資料庫操作，將數據恢復原狀
+
+- `@Transactional` 在 test 資料夾（單元測試）
+    - 在該單元測試結束後，強制 rollback 所有執行的資料庫操作，將數據恢復原狀
