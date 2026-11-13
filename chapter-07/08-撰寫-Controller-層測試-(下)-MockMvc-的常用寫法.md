@@ -82,3 +82,22 @@ RequestBuilder requestBuilder = MockMvcRequestBuilders
 ```
 GET /students/3?graduate=true
 ```
+
+測試 POST API
+
+```java
+@Test
+public void create() throws Exception {
+RequestBuilder requestBuilder = MockMvcRequestBuilders
+        .post("/students")
+        .contentType(MediaType.APPLICATION_JSON)
+        .content("{\n" +
+                "  \"name\": \"Hank\",\n" +
+                "  \"score\": 14.6,\n" +
+                "  \"graduate\": false\n" +
+                "}");
+
+mockMvc.perform(requestBuilder)
+        .andExpect(status().is(201));
+}
+```
