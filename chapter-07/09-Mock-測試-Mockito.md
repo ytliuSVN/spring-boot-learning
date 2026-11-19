@@ -31,3 +31,39 @@ flowchart LR
 
 ## Mockito
 
+- Mockito 是在 Spring Boot 中進行 Mock 測試的工具
+- 功能：
+    - 模擬方法的返回值
+    - 模擬拋出 Exception
+    - 記錄方法的使用次數、順序
+
+src/test/java/com/example/demo/service/StudentServiceImplMockTest.java
+
+```java
+@SpringBootTest
+public class StudentServiceImplMockTest {
+
+    @Autowired
+    private StudentService studentService;
+
+    @MockBean
+    private StudentDao studentDao;
+
+    @Test
+    public void getById() {
+        Student mockStudent = new Student();
+        mockStudent.setId(100);
+        mockStudent.setName("I'm mock");
+
+        // Mockito.when(studentDao.getById(3)).thenReturn(mockStudent);
+        // another way to mock for widely use, any() means any parameter, not just 3
+        Mockito.when(studentDao.getById(Mockito.any())).thenReturn(mockStudent);
+
+        Student student = studentService.getById(3);
+        assertNotNull(student);
+        assertEquals(100, student.getId());
+        assertEquals("I'm mock", student.getName());
+    }
+}
+```
+
