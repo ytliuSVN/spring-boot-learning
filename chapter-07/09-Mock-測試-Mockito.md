@@ -89,7 +89,11 @@ public class StudentServiceImplMockTest {
 
         // Mockito.when(studentDao.getById(3)).thenReturn(mockStudent);
         // another way to mock for widely use, any() means any parameter, not just 3
-        Mockito.when(studentDao.getById(Mockito.any())).thenReturn(mockStudent);
+
+        // 第一種寫法 when...thenReturn
+        // Mockito.when(studentDao.getById(Mockito.any())).thenReturn(mockStudent);
+        // 第二種寫法 doReturn...when
+        Mockito.doReturn(mockStudent).when(studentDao).getById(Mockito.any());
     }
 
     @Test
@@ -109,3 +113,7 @@ public class StudentServiceImplMockTest {
     }
 }
 ```
+
+## Mockito 的用法
+
+-
