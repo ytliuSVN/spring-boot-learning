@@ -116,4 +116,18 @@ public class StudentServiceImplMockTest {
 
 ## Mockito 的用法
 
--
+- `@MockBean`：產生一個假的 bean，替換掉 Spring 容器中的 bean
+    - 沒有定義的方法，預設返回 null
+- 模擬方法的返回值
+
+```java
+Student mockStudent = new Student();
+mockStudent.setId(100);
+mockStudent.setName("I'm mock");
+
+// 第一種寫法 when...thenReturn
+// Mockito.when(studentDao.getById(Mockito.any())).thenReturn(mockStudent);
+
+// 第二種寫法 doReturn...when
+Mockito.doReturn(mockStudent).when(studentDao).getById(Mockito.any());
+```
