@@ -67,7 +67,7 @@ public class StudentServiceImplMockTest {
 }
 ```
 
-## @BeforeEach
+## `@BeforeEach`
 
 每個 `@Test` 執行前都會執行一次建立 Mock 物件，讓每個測試都能使用相同的初始化設定。
 
@@ -154,3 +154,14 @@ Mockito.verify(studentDao, Mockito.times(2)).getById(Mockito.any());
     - 不能 mock `private` 方法
     - 不能 mock `final class` 方法
         - 禁止被繼承
+
+
+## `@MockBean` vs `@SpyBean`
+
+- `@MockBean`： 產生一個假的 bean，替換掉 Spring 容器中的 bean
+    - 沒有定義的方法，預設返回 null
+    - 全部假的
+- `@SpyBean`: Spring 容器中的 bean 仍舊是正常的 bean，只替換其中幾個方法
+    - 沒有定義的方法，預設使用真實的方法
+    - 半真半假
+
