@@ -67,3 +67,45 @@ public class StudentServiceImplMockTest {
 }
 ```
 
+## @BeforeEach
+
+每個 `@Test` 執行前都會執行一次建立 Mock 物件，讓每個測試都能使用相同的初始化設定。
+
+```java
+@SpringBootTest
+public class StudentServiceImplMockTest {
+
+    @Autowired
+    private StudentService studentService;
+
+    @MockBean
+    private StudentDao studentDao;
+
+    @BeforeEach
+    public void setupMockStudent() {
+        Student mockStudent = new Student();
+        mockStudent.setId(100);
+        mockStudent.setName("I'm mock");
+
+        // Mockito.when(studentDao.getById(3)).thenReturn(mockStudent);
+        // another way to mock for widely use, any() means any parameter, not just 3
+        Mockito.when(studentDao.getById(Mockito.any())).thenReturn(mockStudent);
+    }
+
+    @Test
+    public void getById() {
+        Student student = studentService.getById(3);
+        assertNotNull(student);
+        assertEquals(100, student.getId());
+        assertEquals("I'm mock", student.getName());
+    }
+
+    @Test
+    public void getById2() {
+        Student student = studentService.getById(3);
+        assertNotNull(student);
+        assertEquals(100, student.getId());
+        assertEquals("I'm mock", student.getName());
+    }
+}
+```
