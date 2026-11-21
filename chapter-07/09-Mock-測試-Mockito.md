@@ -164,4 +164,38 @@ Mockito.verify(studentDao, Mockito.times(2)).getById(Mockito.any());
 - `@SpyBean`: Spring 容器中的 bean 仍舊是正常的 bean，只替換其中幾個方法
     - 沒有定義的方法，預設使用真實的方法
     - 半真半假
+    - 盡量使用 `doReturn`
 
+
+```java
+@SpringBootTest
+public class StudentServiceImplMockTest {
+
+    @Autowired
+    private StudentService studentService;
+
+    @SpyBean
+    private StudentDao studentDao;
+
+    @Test
+    public void insert() {
+        Mockito.doReturn(100).when(studentDao).insert(Mockito.any());
+
+        Student student = new Student();
+        student.setName("test");
+        student.setScore(50.0);
+        student.setGraduate(false);
+        Integer studentId = studentService.insert(student);
+
+        assertEquals(100, studentId);
+    }
+
+    @Test
+    public void getById() {
+        Student student = studentService.getById(3);
+        assertNotNull(student);
+        assertEquals(3, student.getId());
+        assertEquals("Judy", student.getName());
+    }
+}
+```
