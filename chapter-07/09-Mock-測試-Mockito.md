@@ -131,3 +131,26 @@ mockStudent.setName("I'm mock");
 // 第二種寫法 doReturn...when
 Mockito.doReturn(mockStudent).when(studentDao).getById(Mockito.any());
 ```
+
+- 模擬噴出 Exception
+
+```java
+// 方法不返回 void 的寫法 when...thenThrow
+Mockito.when(studentDao.insert(Mockito.any())).thenThrow(new RuntimeException());
+
+// 方法返回為 void 的寫法 doThrow...when...
+Mockito.doThrow(new RuntimeException()).when(studentDao).deleteById(Mockito.any());
+```
+
+- 紀錄方法的使用次數,順序
+
+```java
+Mockito.verify(studentDao, Mockito.times(2)).getById(Mockito.any());
+```
+
+- 限制：
+    - 不能 mock `static` 方法
+        - 不需要 `new`，可以直接透過 `Class.method()` 呼叫。
+    - 不能 mock `private` 方法
+    - 不能 mock `final class` 方法
+        - 禁止被繼承
